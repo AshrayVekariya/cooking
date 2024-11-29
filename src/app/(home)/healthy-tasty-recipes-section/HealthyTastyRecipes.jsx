@@ -16,7 +16,9 @@ const HealthyTastyRecipesSection = ({yesevaOne}) => {
                         {
                             healthyTastyRecipesMenu.map((item, index) => {
                                 return (
-                                    <Card items={item} index={index} />
+                                    <Fragment key={`healthyTastyRecipesMenu-${index}`}>
+                                        <Card items={item} index={index} />
+                                    </Fragment>
                                 )
                             })
                         }

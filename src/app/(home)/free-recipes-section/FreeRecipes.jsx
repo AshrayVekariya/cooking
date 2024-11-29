@@ -18,7 +18,9 @@ const FreeRecipesSection = ({ yesevaOne, bg, freeCourseRecipesMenu }) => {
                                 {
                                     freeCourseRecipesMenu.map((item, index) => {
                                         return (
-                                            <Card items={item} index={index} />
+                                            <Fragment key={`freeCourseRecipesMenu-${index}`}>
+                                                <Card items={item} index={index} />
+                                            </Fragment>
                                         )
                                     })
                                 }
@@ -28,7 +30,9 @@ const FreeRecipesSection = ({ yesevaOne, bg, freeCourseRecipesMenu }) => {
                                 {
                                     freeRecipesMenu.map((item, index) => {
                                         return (
-                                            <Card items={item} index={index} />
+                                            <Fragment key={`freeRecipesMenu-${index}`}>
+                                                <Card items={item} index={index} />
+                                            </Fragment>
                                         )
                                     })
                                 }

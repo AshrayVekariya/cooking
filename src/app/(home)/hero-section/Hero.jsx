@@ -78,9 +78,11 @@ const HeroSection = ({ yesevaOne }) => {
                 dynamicHeight={false}
             >
                 {
-                    data.map((items) => {
+                    data.map((items, index) => {
                         return (
-                            <HeroCard data={items} />
+                            <Fragment key={`hero-data-${index}`}>
+                                <HeroCard data={items} />
+                            </Fragment>
                         )
                     })
                 }
